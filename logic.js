@@ -128,5 +128,7 @@ function reset0() {
     rounds = 0;
     document.getElementById("scoreX").innerText = scoreX;
     document.getElementById("scoreO").innerText = scoreO;
+    document.getElementById("games").innerText = rounds;
 };
+
 
