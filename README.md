@@ -6,4 +6,4 @@ Exciting features:
 2. moves history
 3. multiple rounds
 4. reset game
-5. responsive ui
+5. 4 X 4 board
