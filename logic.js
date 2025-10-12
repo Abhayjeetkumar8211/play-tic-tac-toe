@@ -35,46 +35,58 @@ btns.forEach((btn, idx) => {
 });
 // checks winning upon each buttob click
 function checkwin(value) {
-    if (btns[0].innerText == btns[1].innerText && btns[1].innerText == btns[2].innerText && btns[0].innerText != "") {
+    if (btns[0].innerText == btns[1].innerText && btns[1].innerText == btns[2].innerText && btns[2].innerText == btns[3].innerText &&btns[0].innerText != "") {
         alert(`${value} won!\nClick Next Round to start next game.`);
         calScore(value, 1);
         return 1;
     }
-    else if (btns[3].innerText == btns[4].innerText && btns[4].innerText == btns[5].innerText && btns[3].innerText != "") {
+    else if (btns[4].innerText == btns[5].innerText && btns[5].innerText == btns[6].innerText && btns[6].innerText == btns[7].innerText && btns[4].innerText != "") {
         alert(`${value} won!\nClick Next Round to start next game.`);
         calScore(value, 1);
         return 1;
     }
-    else if (btns[6].innerText == btns[7].innerText && btns[8].innerText == btns[7].innerText && btns[6].innerText != "") {
+    else if (btns[8].innerText == btns[9].innerText && btns[9].innerText == btns[10].innerText && btns[10].innerText == btns[11].innerText &&btns[8].innerText != "") {
         alert(`${value} won!\nClick Next Round to start next game.`);
         calScore(value, 1);
         return 1;
     }
-    else if (btns[0].innerText == btns[3].innerText && btns[6].innerText == btns[3].innerText && btns[0].innerText != "") {
+    else if (btns[12].innerText == btns[13].innerText && btns[14].innerText == btns[13].innerText && btns[14].innerText == btns[15].innerText &&btns[12].innerText != "") {
         alert(`${value} won!\nClick Next Round to start next game.`);
         calScore(value, 1);
         return 1;
     }
-    else if (btns[1].innerText == btns[4].innerText && btns[4].innerText == btns[7].innerText && btns[1].innerText != "") {
-        alert(`${value} won!\nClick Next Round to start next game.`);
-        calScore(value, 1);
-        return 1;
-    } else if (btns[2].innerText == btns[5].innerText && btns[5].innerText == btns[8].innerText && btns[2].innerText != "") {
+    else if (btns[0].innerText == btns[5].innerText && btns[5].innerText == btns[10].innerText && btns[5].innerText == btns[10].innerText && btns[0].innerText != "") {
         alert(`${value} won!\nClick Next Round to start next game.`);
         calScore(value, 1);
         return 1;
     }
-    else if (btns[0].innerText == btns[4].innerText && btns[4].innerText == btns[8].innerText && btns[0].innerText != "") {
+     else if (btns[3].innerText == btns[6].innerText && btns[6].innerText == btns[9].innerText && btns[9].innerText == btns[12].innerText && btns[3].innerText != "") {
         alert(`${value} won!\nClick Next Round to start next game.`);
         calScore(value, 1);
         return 1;
     }
-    else if (btns[2].innerText == btns[4].innerText && btns[4].innerText == btns[6].innerText && btns[2].innerText != "") {
+    else if (btns[0].innerText == btns[4].innerText && btns[8].innerText == btns[4].innerText && btns[8].innerText == btns[12].innerText && btns[0].innerText != "") {
         alert(`${value} won!\nClick Next Round to start next game.`);
         calScore(value, 1);
         return 1;
     }
-    else if (btns[0].innerText != "" &&
+    else if (btns[1].innerText == btns[5].innerText && btns[9].innerText == btns[5].innerText && btns[9].innerText == btns[13].innerText && btns[13].innerText != "") {
+        alert(`${value} won!\nClick Next Round to start next game.`);
+        calScore(value, 1);
+        return 1;
+    }
+    else if (btns[2].innerText == btns[6].innerText && btns[6].innerText == btns[10].innerText && btns[14].innerText == btns[10].innerText && btns[2].innerText != "") {
+        alert(`${value} won!\nClick Next Round to start next game.`);
+        calScore(value, 1);
+        return 1;
+    }
+    else if (btns[3].innerText == btns[7].innerText && btns[11].innerText == btns[7].innerText && btns[11].innerText == btns[15].innerText && btns[3].innerText != "") {
+        alert(`${value} won!\nClick Next Round to start next game.`);
+        calScore(value, 1);
+        return 1;
+    }
+    else if (
+        btns[0].innerText != "" &&
         btns[1].innerText != "" &&
         btns[2].innerText != "" &&
         btns[3].innerText != "" &&
@@ -82,7 +94,15 @@ function checkwin(value) {
         btns[5].innerText != "" &&
         btns[6].innerText != "" &&
         btns[7].innerText != "" &&
-        btns[8].innerText != "") {
+        btns[8].innerText != "" &&
+        btns[9].innerText != "" &&
+        btns[10].innerText != "" &&
+        btns[11].innerText != "" &&
+        btns[12].innerText != "" &&
+        btns[13].innerText != "" &&
+        btns[14].innerText != "" &&
+        btns[15].innerText != ""
+    ) {
         alert("Match Draw!\nClick Next Round to start next game.");
         calScore(value, 0);
 
@@ -128,7 +148,5 @@ function reset0() {
     rounds = 0;
     document.getElementById("scoreX").innerText = scoreX;
     document.getElementById("scoreO").innerText = scoreO;
-    document.getElementById("games").innerText = rounds;
 };
-
 
