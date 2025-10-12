@@ -153,10 +153,11 @@ td:not([class]) {
         height: 18vw;
         min-width: 54px;
         min-height: 54px;
-        font-size: 5rem;
+        font-size: 2rem;
     }
 
     table.game-board {
         padding: 2vw;
     }
+
 }
