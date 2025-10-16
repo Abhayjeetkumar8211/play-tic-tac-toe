@@ -17,7 +17,7 @@ btns.forEach((btn, idx) => {
             console.log(`button ${idx + 1} was clicked`);
             historyX.innerText += `\n X --> ${idx + 1}`;
             already_win = checkwin(X);
-            
+            turn.innerText="O";
 
 
         }
@@ -30,7 +30,7 @@ btns.forEach((btn, idx) => {
             console.log(`button ${idx + 1} was clicked`);
             historyO.innerText += `\n O --> ${idx + 1}`;
             already_win = checkwin(O);
-            
+            turn.innerText="X"
 
         }
         else {
