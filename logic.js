@@ -215,7 +215,7 @@ function inner0() {
     historyX.innerText = "Move History";
     historyO.innerText = "Move History";
     already_win = 0;
-    winner.style.display="none";
+    winner.classList.add("hide-winner");
 }
 // for reset button
 let reset = document.getElementById("reset");
