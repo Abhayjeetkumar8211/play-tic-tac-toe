@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+
+<body>
+    <div class="header-bar">
+        <h1>Tic Tac Toe</h1>
+        <div class="gamesnumber">
+            <div>Rounds</div>
+            <div id="games">0</div>
+        </div>
+        <button id="reset">Reset Game</button>
+        <button id="continue">Next Round</button>
+    </div>
+    <div class="game-board">
+        <div id="winner" class="hide-winner">
+            
+        </div>
+        <table>
+            <tr>
+                <td class="left-top-corner"><button class="value"></button></td>
+                <td class="top-mid"><button class="value"></button></td>
+                <td class="right-top-corner"><button class="value"></button></td>
+            </tr>
+            <tr>
+                <td class="left-mid"><button class="value"></button></td>
+                <td><button class="value"></button></td>
+                <td class="right-mid"><button class="value"></button></td>
+            </tr>
+            <tr>
+                <td class="left-bottom-corner"><button class="value"></button></td>
+                <td class="bottom-mid"><button class="value"></button></td>
+                <td class="right-bottom-corner"><button class="value"></button></td>
+            </tr>
+        </table>
+        <a href="3x3.html" class="the">3x3</a>
+        <a href="tic-tac-toe.html" class="fou">4x4</a>
+    </div>
+    <div class="score">
+        <div class="scoreX">
+            <h3>Score X</h3>
+            <div id="scoreX">
+                0
+            </div>
+            <div id="hisX">Move History</div>
+        </div>
+        <div class="next-turn">
+            <span>Next Turn: </span><span id="nxttrn"></span>
+        </div>
+        <div class="scoreO">
+            <h3>Score O</h3>
+            <div id="scoreO">
+                0
+            </div>
+            <div id="hisO">Move History</div>
+        </div>
+    </div>
+    <script src="logic2.js"></script>
+</body>
+
+</html>
