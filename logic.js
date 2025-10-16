@@ -1,4 +1,3 @@
-7
 let btns = document.querySelectorAll(".value");
 let historyX = document.getElementById("hisX");
 let historyO = document.getElementById("hisO");
