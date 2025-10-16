@@ -1,4 +1,4 @@
-
+7
 let btns = document.querySelectorAll(".value");
 let historyX = document.getElementById("hisX");
 let historyO = document.getElementById("hisO");
@@ -251,4 +251,3 @@ function reset0() {
 //     four_board.classList.remove("hide");
 
 // }
-No file chosenNo file chosen
