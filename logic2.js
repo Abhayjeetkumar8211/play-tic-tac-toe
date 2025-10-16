@@ -135,7 +135,7 @@ function checkwin(value) {
         btns[6].innerText != "" &&
         btns[7].innerText != "" &&
         btns[8].innerText != "") {
-        winner.innerText=`${value} won!\nClick\n Next Round`;
+        winner.innerText=`Match Draw!\nClick\n Next Round`;
         winner.classList.remove("hide-winner");
         already_win = 1; 
         calScore(value, 0);
