@@ -1,9 +1,12 @@
+
 let btns = document.querySelectorAll(".value");
 let historyX = document.getElementById("hisX");
 let historyO = document.getElementById("hisO");
 let usr1_turn = true;
 let usr2_turn = false;
 let already_win = 0;
+let turn=document.getElementById("nxttrn");
+let winner=document.getElementById("winner");
 btns.forEach((btn, idx) => {
     btn.addEventListener("click", () => {
         if (usr1_turn && !usr2_turn && btn.innerText == "" && already_win != 1) {
@@ -15,6 +18,8 @@ btns.forEach((btn, idx) => {
             console.log(`button ${idx + 1} was clicked`);
             historyX.innerText += `\n X --> ${idx + 1}`;
             already_win = checkwin(X);
+            
+
 
         }
         else if (!usr1_turn && usr2_turn && btn.innerText == "" && already_win != 1) {
@@ -26,6 +31,7 @@ btns.forEach((btn, idx) => {
             console.log(`button ${idx + 1} was clicked`);
             historyO.innerText += `\n O --> ${idx + 1}`;
             already_win = checkwin(O);
+            
 
         }
         else {
@@ -35,54 +41,110 @@ btns.forEach((btn, idx) => {
 });
 // checks winning upon each buttob click
 function checkwin(value) {
-    if (btns[0].innerText == btns[1].innerText && btns[1].innerText == btns[2].innerText && btns[2].innerText == btns[3].innerText &&btns[0].innerText != "") {
-        alert(`${value} won!\nClick Next Round to start next game.`);
+    if (btns[0].innerText == btns[1].innerText && btns[1].innerText == btns[2].innerText && btns[2].innerText == btns[3].innerText && btns[0].innerText != "") {
         calScore(value, 1);
+        btns[0].classList.add("winner-flash");
+        btns[1].classList.add("winner-flash");
+        btns[2].classList.add("winner-flash");
+        btns[3].classList.add("winner-flash");
+        winner.innerText=`${value} won!\nClick\n Next Round`;
+        winner.classList.remove("hide-winner");
+
         return 1;
     }
     else if (btns[4].innerText == btns[5].innerText && btns[5].innerText == btns[6].innerText && btns[6].innerText == btns[7].innerText && btns[4].innerText != "") {
-        alert(`${value} won!\nClick Next Round to start next game.`);
         calScore(value, 1);
+        btns[4].classList.add("winner-flash");
+        btns[5].classList.add("winner-flash");
+        btns[6].classList.add("winner-flash");
+        btns[7].classList.add("winner-flash");
+        winner.innerText=`${value} won!\nClick\n Next Round`;
+        winner.classList.remove("hide-winner");
         return 1;
     }
-    else if (btns[8].innerText == btns[9].innerText && btns[9].innerText == btns[10].innerText && btns[10].innerText == btns[11].innerText &&btns[8].innerText != "") {
-        alert(`${value} won!\nClick Next Round to start next game.`);
+    else if (btns[8].innerText == btns[9].innerText && btns[9].innerText == btns[10].innerText && btns[10].innerText == btns[11].innerText && btns[8].innerText != "") {
         calScore(value, 1);
+        btns[8].classList.add("winner-flash");
+        btns[9].classList.add("winner-flash");
+        btns[10].classList.add("winner-flash");
+        btns[11].classList.add("winner-flash");
+        winner.innerText=`${value} won!\nClick\n Next Round`;
+        winner.classList.remove("hide-winner");
         return 1;
     }
-    else if (btns[12].innerText == btns[13].innerText && btns[14].innerText == btns[13].innerText && btns[14].innerText == btns[15].innerText &&btns[12].innerText != "") {
-        alert(`${value} won!\nClick Next Round to start next game.`);
+    else if (btns[12].innerText == btns[13].innerText && btns[14].innerText == btns[13].innerText && btns[14].innerText == btns[15].innerText && btns[12].innerText != "") {
+         winner.innerText=`${value} won!\nClick\n Next Round`;
+        winner.classList.remove("hide-winner");
         calScore(value, 1);
+        btns[12].classList.add("winner-flash");
+        btns[13].classList.add("winner-flash");
+        btns[14].classList.add("winner-flash");
+        btns[15].classList.add("winner-flash");
         return 1;
     }
-    else if (btns[0].innerText == btns[5].innerText && btns[5].innerText == btns[10].innerText && btns[5].innerText == btns[10].innerText && btns[0].innerText != "") {
-        alert(`${value} won!\nClick Next Round to start next game.`);
+    else if (btns[0].innerText == btns[5].innerText && btns[5].innerText == btns[10].innerText && btns[15].innerText == btns[10].innerText && btns[0].innerText != "") {
         calScore(value, 1);
+        btns[0].classList.add("winner-flash");
+        btns[5].classList.add("winner-flash");
+        btns[10].classList.add("winner-flash");
+        btns[15].classList.add("winner-flash");
+         winner.innerText=`${value} won!\nClick\n Next Round`;
+        winner.classList.remove("hide-winner");
+
         return 1;
     }
-     else if (btns[3].innerText == btns[6].innerText && btns[6].innerText == btns[9].innerText && btns[9].innerText == btns[12].innerText && btns[3].innerText != "") {
-        alert(`${value} won!\nClick Next Round to start next game.`);
+    else if (btns[3].innerText == btns[6].innerText && btns[6].innerText == btns[9].innerText && btns[9].innerText == btns[12].innerText && btns[3].innerText != "") {
         calScore(value, 1);
+        btns[3].classList.add("winner-flash");
+        btns[6].classList.add("winner-flash");
+        btns[9].classList.add("winner-flash");
+        btns[12].classList.add("winner-flash");
+         winner.innerText=`${value} won!\nClick\n Next Round`;
+        winner.classList.remove("hide-winner");
+
         return 1;
     }
     else if (btns[0].innerText == btns[4].innerText && btns[8].innerText == btns[4].innerText && btns[8].innerText == btns[12].innerText && btns[0].innerText != "") {
-        alert(`${value} won!\nClick Next Round to start next game.`);
         calScore(value, 1);
+        btns[0].classList.add("winner-flash");
+        btns[4].classList.add("winner-flash");
+        btns[8].classList.add("winner-flash");
+        btns[12].classList.add("winner-flash");
+        alert(`${value} won!\nClick Next Round`);
+
         return 1;
     }
     else if (btns[1].innerText == btns[5].innerText && btns[9].innerText == btns[5].innerText && btns[9].innerText == btns[13].innerText && btns[13].innerText != "") {
-        alert(`${value} won!\nClick Next Round to start next game.`);
         calScore(value, 1);
+        btns[1].classList.add("winner-flash");
+        btns[5].classList.add("winner-flash");
+        btns[9].classList.add("winner-flash");
+        btns[13].classList.add("winner-flash");
+         winner.innerText=`${value} won!\nClick\n Next Round`;
+        winner.classList.remove("hide-winner");
+
         return 1;
     }
     else if (btns[2].innerText == btns[6].innerText && btns[6].innerText == btns[10].innerText && btns[14].innerText == btns[10].innerText && btns[2].innerText != "") {
-        alert(`${value} won!\nClick Next Round to start next game.`);
         calScore(value, 1);
+        btns[2].classList.add("winner-flash");
+        btns[6].classList.add("winner-flash");
+        btns[10].classList.add("winner-flash");
+        btns[14].classList.add("winner-flash");
+         winner.innerText=`${value} won!\nClick\n Next Round`;
+        winner.classList.remove("hide-winner");
+
         return 1;
     }
     else if (btns[3].innerText == btns[7].innerText && btns[11].innerText == btns[7].innerText && btns[11].innerText == btns[15].innerText && btns[3].innerText != "") {
-        alert(`${value} won!\nClick Next Round to start next game.`);
         calScore(value, 1);
+        btns[3].classList.add("winner-flash");
+        btns[7].classList.add("winner-flash");
+        btns[11].classList.add("winner-flash");
+        btns[15].classList.add("winner-flash");
+        winner.innerText=`${value} won!\nClick\n Next Round`;
+        winner.classList.remove("hide-winner");
+
         return 1;
     }
     else if (
@@ -103,7 +165,8 @@ function checkwin(value) {
         btns[14].innerText != "" &&
         btns[15].innerText != ""
     ) {
-        alert("Match Draw!\nClick Next Round to start next game.");
+         winner.innerText="Match Draw!\nClick\n Next Round";
+         winner.classList.remove("hide-winner");
         calScore(value, 0);
 
     }
@@ -117,11 +180,26 @@ function calScore(value, plus) {
     if (value == "X" && plus == 1) {
         scoreX += plus;
         document.getElementById("scoreX").innerText = scoreX;
-
+        usr1_turn = true;
+        usr2_turn = false;
+        turn.innerText="X";
     }
     else if (value = "O" && plus == 1) {
         scoreO += plus;
         document.getElementById("scoreO").innerText = scoreO;
+        usr1_turn = false;
+        usr2_turn = true;
+        turn.innerText="O";
+    }
+    else if (value="X"){
+        usr1_turn = false;
+        usr2_turn = true;
+        turn.innerText="X";
+    }
+    else if (value="O"){
+        usr1_turn = true;
+        usr2_turn = false;
+        turn.innerText="O";
     }
     rounds += 1;
     console.log(rounds);
@@ -133,10 +211,12 @@ next.addEventListener("click", inner0)
 function inner0() {
     btns.forEach((btn) => {
         btn.innerText = "";
+        btn.classList.remove('winner-flash');
     });
     historyX.innerText = "Move History";
     historyO.innerText = "Move History";
     already_win = 0;
+    winner.style.display="none";
 }
 // for reset button
 let reset = document.getElementById("reset");
@@ -148,7 +228,27 @@ function reset0() {
     rounds = 0;
     document.getElementById("scoreX").innerText = scoreX;
     document.getElementById("scoreO").innerText = scoreO;
-    document.getElementById("games").innerText = rounds;
 };
+// three_btn = document.getElementById("three");
+// four_btn = document.getElementById("four");
+// three_board = document.getElementById("three_board");
+// four_board = document.getElementById("four_board");
+// three_btn.addEventListener("onclick", render3x3());
+// function render3x3() {
+//     console.log("3x3 clicked");
+//     three_board.classList.add("show");
+//     three_board.classList.remove("hide");
+//     four_board.classList.add("hide");
+//     four_board.classList.remove("show");
 
+// }
+// four_btn.addEventListener("onclick", render4x4())
+// function render4x4() {
+//     console.log("4x4 clicked");
+//     three_board.classList.add("hide");
+//     three_board.classList.remove("show");
+//     four_board.classList.add("show");
+//     four_board.classList.remove("hide");
 
+// }
+No file chosenNo file chosen
