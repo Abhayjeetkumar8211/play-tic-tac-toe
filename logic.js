@@ -30,7 +30,7 @@ btns.forEach((btn, idx) => {
             console.log(`button ${idx + 1} was clicked`);
             historyO.innerText += `\n O --> ${idx + 1}`;
             already_win = checkwin(O);
-            turn.innerText="X"
+            turn.innerText="X";
 
         }
         else {
@@ -130,7 +130,7 @@ function checkwin(value) {
         btns[6].classList.add("winner-flash");
         btns[10].classList.add("winner-flash");
         btns[14].classList.add("winner-flash");
-         winner.innerText=`${value} won!\nClick\n Next Round`;
+        winner.innerText=`${value} won!\nClick\n Next Round`;
         winner.classList.remove("hide-winner");
 
         return 1;
@@ -146,6 +146,311 @@ function checkwin(value) {
 
         return 1;
     }
+    // ...existing code...
+    else if (btns[2].innerText == btns[1].innerText && btns[1].innerText == btns[0].innerText && btns[0].innerText == btns[4].innerText && btns[4].innerText == btns[8].innerText && btns[2].innerText != "") {
+        calScore(value, 1);
+        [2,1,0,4,8].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+    else if (btns[3].innerText == btns[2].innerText && btns[2].innerText == btns[1].innerText && btns[1].innerText == btns[5].innerText && btns[5].innerText == btns[9].innerText && btns[3].innerText != "") {
+        calScore(value, 1);
+        [3,2,1,5,9].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+    else if (btns[0].innerText == btns[1].innerText && btns[1].innerText == btns[2].innerText && btns[2].innerText == btns[6].innerText && btns[6].innerText == btns[10].innerText && btns[0].innerText != "") {
+        calScore(value, 1);
+        [0,1,2,6,10].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+    else if (btns[1].innerText == btns[2].innerText && btns[2].innerText == btns[3].innerText && btns[3].innerText == btns[7].innerText && btns[7].innerText == btns[11].innerText && btns[1].innerText != "") {
+        calScore(value, 1);
+        [1,2,3,7,11].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+
+    else if (btns[6].innerText == btns[5].innerText && btns[5].innerText == btns[4].innerText && btns[4].innerText == btns[8].innerText && btns[8].innerText == btns[12].innerText && btns[6].innerText != "") {
+        calScore(value, 1);
+        [6,5,4,8,12].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+    else if (btns[7].innerText == btns[6].innerText && btns[6].innerText == btns[5].innerText && btns[5].innerText == btns[9].innerText && btns[9].innerText == btns[13].innerText && btns[7].innerText != "") {
+        calScore(value, 1);
+        [7,6,5,9,13].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+    else if (btns[4].innerText == btns[5].innerText && btns[5].innerText == btns[6].innerText && btns[6].innerText == btns[10].innerText && btns[10].innerText == btns[14].innerText && btns[4].innerText != "") {
+        calScore(value, 1);
+        [4,5,6,10,14].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+    else if (btns[5].innerText == btns[6].innerText && btns[6].innerText == btns[7].innerText && btns[7].innerText == btns[11].innerText && btns[11].innerText == btns[15].innerText && btns[5].innerText != "") {
+        calScore(value, 1);
+        [5,6,7,11,15].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+
+    else if (btns[0].innerText == btns[4].innerText && btns[4].innerText == btns[8].innerText && btns[8].innerText == btns[9].innerText && btns[9].innerText == btns[10].innerText && btns[0].innerText != "") {
+        calScore(value, 1);
+        [0,4,8,9,10].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+    else if (btns[1].innerText == btns[5].innerText && btns[5].innerText == btns[9].innerText && btns[9].innerText == btns[10].innerText && btns[10].innerText == btns[11].innerText && btns[1].innerText != "") {
+        calScore(value, 1);
+        [1,5,9,10,11].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+    else if (btns[2].innerText == btns[6].innerText && btns[6].innerText == btns[10].innerText && btns[10].innerText == btns[9].innerText && btns[9].innerText == btns[8].innerText && btns[2].innerText != "") {
+        calScore(value, 1);
+        [2,6,10,9,8].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+    else if (btns[3].innerText == btns[7].innerText && btns[7].innerText == btns[11].innerText && btns[11].innerText == btns[10].innerText && btns[10].innerText == btns[9].innerText && btns[3].innerText != "") {
+        calScore(value, 1);
+        [3,7,11,10,9].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+
+    else if (btns[4].innerText == btns[8].innerText && btns[8].innerText == btns[12].innerText && btns[12].innerText == btns[13].innerText && btns[13].innerText == btns[14].innerText && btns[4].innerText != "") {
+        calScore(value, 1);
+        [4,8,12,13,14].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+    else if (btns[5].innerText == btns[9].innerText && btns[9].innerText == btns[13].innerText && btns[13].innerText == btns[14].innerText && btns[14].innerText == btns[15].innerText && btns[5].innerText != "") {
+        calScore(value, 1);
+        [5,9,13,14,15].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+
+    else if (btns[6].innerText == btns[10].innerText && btns[10].innerText == btns[14].innerText && btns[14].innerText == btns[13].innerText && btns[13].innerText == btns[12].innerText && btns[6].innerText != "") {
+        calScore(value, 1);
+        [6,10,14,13,12].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+    else if (btns[7].innerText == btns[11].innerText && btns[11].innerText == btns[15].innerText && btns[15].innerText == btns[14].innerText && btns[14].innerText == btns[13].innerText && btns[7].innerText != "") {
+        calScore(value, 1);
+        [7,11,15,14,13].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+
+    else if (btns[12].innerText == btns[13].innerText && btns[13].innerText == btns[14].innerText && btns[14].innerText == btns[9].innerText && btns[9].innerText == btns[5].innerText && btns[12].innerText != "") {
+        calScore(value, 1);
+        [12,13,14,9,5].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+
+    else if (btns[0].innerText == btns[1].innerText && btns[1].innerText == btns[2].innerText && btns[2].innerText == btns[5].innerText && btns[5].innerText == btns[9].innerText && btns[0].innerText != "") {
+        calScore(value, 1);
+        [0,1,2,5,9].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+    else if (btns[1].innerText == btns[2].innerText && btns[2].innerText == btns[3].innerText && btns[3].innerText == btns[6].innerText && btns[6].innerText == btns[10].innerText && btns[1].innerText != "") {
+        calScore(value, 1);
+        [1,2,3,6,10].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+
+    else if (btns[4].innerText == btns[5].innerText && btns[5].innerText == btns[6].innerText && btns[6].innerText == btns[9].innerText && btns[9].innerText == btns[13].innerText && btns[4].innerText != "") {
+        calScore(value, 1);
+        [4,5,6,9,13].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+    else if (btns[5].innerText == btns[6].innerText && btns[6].innerText == btns[7].innerText && btns[7].innerText == btns[10].innerText && btns[10].innerText == btns[14].innerText && btns[5].innerText != "") {
+        calScore(value, 1);
+        [5,6,7,10,14].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+
+    else if (btns[8].innerText == btns[9].innerText && btns[9].innerText == btns[10].innerText && btns[10].innerText == btns[5].innerText && btns[5].innerText == btns[1].innerText && btns[8].innerText != "") {
+        calScore(value, 1);
+        [8,9,10,5,1].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+    else if (btns[9].innerText == btns[10].innerText && btns[10].innerText == btns[11].innerText && btns[11].innerText == btns[6].innerText && btns[6].innerText == btns[2].innerText && btns[9].innerText != "") {
+        calScore(value, 1);
+        [9,10,11,6,2].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+
+    else if (btns[13].innerText == btns[14].innerText && btns[14].innerText == btns[15].innerText && btns[15].innerText == btns[10].innerText && btns[10].innerText == btns[6].innerText && btns[13].innerText != "") {
+        calScore(value, 1);
+        [13,14,15,10,6].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+
+    else if (btns[0].innerText == btns[4].innerText && btns[4].innerText == btns[8].innerText && btns[8].innerText == btns[5].innerText && btns[5].innerText == btns[6].innerText && btns[0].innerText != "") {
+        calScore(value, 1);
+        [0,4,8,5,6].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+    else if (btns[1].innerText == btns[5].innerText && btns[5].innerText == btns[9].innerText && btns[9].innerText == btns[6].innerText && btns[6].innerText == btns[7].innerText && btns[1].innerText != "") {
+        calScore(value, 1);
+        [1,5,9,6,7].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+
+    else if (btns[2].innerText == btns[6].innerText && btns[6].innerText == btns[10].innerText && btns[10].innerText == btns[4].innerText && btns[4].innerText == btns[5].innerText && btns[2].innerText != "") {
+        calScore(value, 1);
+        [2,6,10,4,5].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+    else if (btns[3].innerText == btns[7].innerText && btns[7].innerText == btns[11].innerText && btns[11].innerText == btns[5].innerText && btns[5].innerText == btns[6].innerText && btns[3].innerText != "") {
+        calScore(value, 1);
+        [3,7,11,5,6].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+
+    else if (btns[4].innerText == btns[8].innerText && btns[8].innerText == btns[12].innerText && btns[12].innerText == btns[9].innerText && btns[9].innerText == btns[10].innerText && btns[4].innerText != "") {
+        calScore(value, 1);
+        [4,8,12,9,10].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+    else if (btns[5].innerText == btns[9].innerText && btns[9].innerText == btns[13].innerText && btns[13].innerText == btns[10].innerText && btns[10].innerText == btns[11].innerText && btns[5].innerText != "") {
+        calScore(value, 1);
+        [5,9,13,10,11].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+
+    else if (btns[6].innerText == btns[10].innerText && btns[10].innerText == btns[14].innerText && btns[14].innerText == btns[8].innerText && btns[8].innerText == btns[9].innerText && btns[6].innerText != "") {
+        calScore(value, 1);
+        [6,10,14,8,9].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+    else if (btns[7].innerText == btns[11].innerText && btns[11].innerText == btns[15].innerText && btns[15].innerText == btns[9].innerText && btns[9].innerText == btns[10].innerText && btns[7].innerText != "") {
+        calScore(value, 1);
+        [7,11,15,9,10].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+
+    else if (btns[1].innerText == btns[4].innerText && btns[4].innerText == btns[5].innerText && btns[5].innerText == btns[6].innerText && btns[6].innerText == btns[9].innerText && btns[1].innerText != "") {
+        calScore(value, 1);
+        [1,4,5,6,9].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+    else if (btns[2].innerText == btns[6].innerText && btns[6].innerText == btns[5].innerText && btns[5].innerText == btns[7].innerText && btns[7].innerText == btns[10].innerText && btns[2].innerText != "") {
+        calScore(value, 1);
+        [2,6,5,7,10].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+
+    else if (btns[5].innerText == btns[9].innerText && btns[9].innerText == btns[8].innerText && btns[8].innerText == btns[10].innerText && btns[10].innerText == btns[13].innerText && btns[5].innerText != "") {
+        calScore(value, 1);
+        [5,9,8,10,13].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+    else if (btns[6].innerText == btns[10].innerText && btns[10].innerText == btns[14].innerText && btns[14].innerText == btns[9].innerText && btns[9].innerText == btns[11].innerText && btns[6].innerText != "") {
+        calScore(value, 1);
+        [6,10,14,9,11].forEach(i => btns[i].classList.add('winner-flash'));
+        winner.innerText = `${value} won!\nClick\n Next Round`;
+        winner.classList.remove('hide-winner');
+        already_win = 1;
+        return 1;
+    }
+// ...existing code...
     else if (
         btns[0].innerText != "" &&
         btns[1].innerText != "" &&
@@ -167,7 +472,7 @@ function checkwin(value) {
          winner.innerText="Match Draw!\nClick\n Next Round";
          winner.classList.remove("hide-winner");
         calScore(value, 0);
-
+        return 1;
     }
     return 0;
 }
@@ -181,24 +486,20 @@ function calScore(value, plus) {
         document.getElementById("scoreX").innerText = scoreX;
         usr1_turn = true;
         usr2_turn = false;
-        turn.innerText="X";
     }
     else if (value = "O" && plus == 1) {
         scoreO += plus;
         document.getElementById("scoreO").innerText = scoreO;
         usr1_turn = false;
         usr2_turn = true;
-        turn.innerText="O";
     }
     else if (value="X"){
         usr1_turn = false;
         usr2_turn = true;
-        turn.innerText="X";
     }
     else if (value="O"){
         usr1_turn = true;
         usr2_turn = false;
-        turn.innerText="O";
     }
     rounds += 1;
     console.log(rounds);
@@ -250,3 +551,4 @@ function reset0() {
 //     four_board.classList.remove("hide");
 
 // }
+
