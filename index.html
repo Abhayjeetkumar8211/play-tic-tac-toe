@@ -18,9 +18,12 @@
         <button id="reset">Reset Game</button>
         <button id="continue">Next Round</button>
     </div>
-
     <div class="game-board">
-        <div id="winner" class="hide-winner"></div>
+        <div class="rules"><a href="#section-rules">Rules for<br>
+ 4 X 4 Board</a></div>
+        <div id="winner" class="hide-winner">
+            
+        </div>
         <table>
             <tr>
                 <td class="left-top-corner"><button class="value"></button></td>
@@ -46,15 +49,18 @@
                 <td class="bottom-mid"><button class="value"></button></td>
                 <td class="right-bottom-corner"><button class="value"></button></td>
             </tr>
-        </table>
-        <a href="3×3.html" class="the">3x3</a>
-        <a href="index.html" class="fou">4x4</a>
-    </div>
 
+        </table>
+        <a href="3x3.html" class="the">3x3</a>
+        <a href="tic-tac-toe.html" class="fou">4x4</a>
+
+    </div>
     <div class="score">
         <div class="scoreX">
             <h3>Score X</h3>
-            <div id="scoreX">0</div>
+            <div id="scoreX">
+                0
+            </div>
             <div id="hisX">Move History</div>
         </div>
         <div class="next-turn">
@@ -62,11 +68,22 @@
         </div>
         <div class="scoreO">
             <h3>Score O</h3>
-            <div id="scoreO">0</div>
+            <div id="scoreO">
+                0
+            </div>
             <div id="hisO">Move History</div>
         </div>
     </div>
+    <div id="section-rules">
+        form these patrens to win the round
+        <img src="./Screenshot 2025-10-18 194410.png" alt="">
+        <img src="./Screenshot 2025-10-18 194444.png" alt="">
+        <img src="./Screenshot 2025-10-18 194557.png" alt="">
+        <img src="./Screenshot 2025-10-18 194705.png" alt="">
+        <img src="./Screenshot 2025-10-18 200946.png" alt="">
 
+    </div>
     <script src="logic.js"></script>
 </body>
+
 </html>
