@@ -6,6 +6,7 @@ body {
     background-color: burlywood;
 }
 
+
 .header-bar {
     display: flex;
     justify-content: space-evenly;
@@ -124,6 +125,7 @@ td:not([class]) {
     padding:0px 10px 0px 10px;
 }
 
+
 /* score board style */
 .score {
     display: flex;
@@ -148,8 +150,8 @@ td:not([class]) {
     gap: 8px;
 }
 @keyframes flash-turn {
-    0%, 100% { color: #228B22; text-shadow: 0 0 8px #fff, 0 0 16px #228B22; }
-    50% { color: #fffbe7; text-shadow: 0 0 16px #228B22, 0 0 32px #fffbe7; }
+    0%, 100% { color: #228B22; text-shadow: 0 0 8px #746161, 0 0 16px #228B22; }
+    50% { color: #39372e; text-shadow: 0 0 16px #228B22, 0 0 32px #7d7a6c; }
 }
 .flash-turn ,#nxttrn {
     animation: flash-turn 3s linear infinite;
@@ -199,12 +201,27 @@ td:not([class]) {
         height: 18vw;
         min-width: 54px;
         min-height: 54px;
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     table.game-board {
         padding: 2vw;
     }
+    #section-rules{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+.rules{
+    position:absolute;
+    top:100px;
+    left:20px;
+    a{
+        color:#7d7a6c;
+        text-decoration:none;
+    }
+}
 }
 .highlighted-cell{
     border:2px solid green;
@@ -236,4 +253,23 @@ td:not([class]) {
 }
 .hide-winner{
     display:none;
+}
+img{
+    height:200px;
+    width:200px;
+    margin:20px;
+}
+#section-rules{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.rules{
+    position:absolute;
+    top:100px;
+    left:20px;
+    a{
+        color:#7d7a6c;
+        text-decoration:none;
+    }
 }
