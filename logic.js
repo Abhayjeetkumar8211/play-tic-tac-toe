@@ -6,6 +6,7 @@ let usr2_turn = false;
 let already_win = 0;
 let turn=document.getElementById("nxttrn");
 let winner=document.getElementById("winner");
+const clickAudio=new Audio("buttonclick-audio.wav");
 btns.forEach((btn, idx) => {
     btn.addEventListener("click", () => {
         if (usr1_turn && !usr2_turn && btn.innerText == "" && already_win != 1) {
@@ -14,24 +15,25 @@ btns.forEach((btn, idx) => {
             btn.style.color = "red";
             usr1_turn = false;
             usr2_turn = true;
+            clickAudio.play();
+            clickAudio.volume=0.5;
             console.log(`button ${idx + 1} was clicked`);
             historyX.innerText += `\n X --> ${idx + 1}`;
             already_win = checkwin(X);
             turn.innerText="O";
-
-
         }
         else if (!usr1_turn && usr2_turn && btn.innerText == "" && already_win != 1) {
             let O = 'O';
             btn.innerText = O;
             btn.style.color = "blue";
             usr1_turn = true;
+            clickAudio.play();
+            clickAudio.volume=0.5;
             usr2_turn = false;
             console.log(`button ${idx + 1} was clicked`);
             historyO.innerText += `\n O --> ${idx + 1}`;
             already_win = checkwin(O);
             turn.innerText="X";
-
         }
         else {
             btn.disable;
